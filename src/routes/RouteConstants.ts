@@ -1,0 +1,7 @@
+export const HOME = 'home'
+export const SIGNUP = 'sign-up'
+export const SIGNIN = 'sign-in'
+export const MOVIES = 'movies'
+export const SHOWS = 'shows'
+export const PROFILE = 'profile'
+export const WATCHLIST = 'watchlist'
