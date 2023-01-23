@@ -1,0 +1,39 @@
+// Colors
+$color-dark: #21282c;
+$color-dark-alt: #1a1e1f;
+$color-light: #efeee0;
+$color-light-2: #c7c7bf;
+
+$color-primary: #f7bb0e;
+$color-primary-alt: #a4c7c6;
+$color-primary-alt-2: #609eaf;
+$color-secondary: #facd66;
+$color-error: #d32752;
+$color-success: #1ac886;
+$grey-dark: #777;
+$grey-dark-2: #999;
+$grey-dark-3: #333;
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 0.5rem;
+
+// box-shadow
+$base-box-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.15);
+
+// font sizes
+$base-font-size: 1.2rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2.5;
+$font-size-xxl: $base-font-size * 4;
+
+// grid
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 2rem;
+$gutter-horizontal: 3rem;

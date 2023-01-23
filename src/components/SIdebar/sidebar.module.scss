@@ -1,0 +1,58 @@
+@use '../../variables.scss' as values;
+
+.sidebar {
+  background-color: values.$color-dark;
+  color: values.$grey-dark;
+  padding: values.$base-padding * 2;
+  height: 100%;
+  position: relative;
+}
+
+.content {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sidebarSection {
+  margin: 20px 0;
+  h5 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 10px;
+  }
+
+  li {
+    a,
+    a:link,
+    a:visited {
+      font-size: 18px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: values.$color-light-2;
+
+      &.active {
+        color: values.$color-primary;
+      }
+    }
+  }
+}
+
+.signout {
+  position: absolute;
+  bottom: 20px;
+  color: values.$color-light-2;
+  font-size: 18px;
+  cursor: pointer;
+}

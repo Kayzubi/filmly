@@ -1,4 +1,3 @@
-import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Aside from '../../components/Aside/Aside'
 import Sidebar from '../../components/SIdebar/Sidebar'
@@ -9,10 +8,11 @@ import {
   SHOWS,
   WATCHLIST,
 } from '../../routes/RouteConstants'
+import styles from './home.module.scss'
 
 const Home = () => {
   return (
-    <div>
+    <div className={styles.home}>
       <Sidebar />
       <div>
         <Routes>
