@@ -1,0 +1,77 @@
+@use '../../variables.scss' as values;
+
+.hero {
+  height: 50vh;
+  padding: 20px 30px;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.coverImage {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: aqua;
+  left: 0;
+  top: 0;
+
+  img {
+    width: 100%;
+  }
+
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(25, 24, 23);
+    background: linear-gradient(
+      90deg,
+      rgba(25, 24, 23, 1) 0%,
+      rgba(25, 24, 23, 0.5494572829131652) 48%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+
+.heroDetails {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+    width: 50%;
+  }
+}
+
+.genres {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.genre {
+  padding: values.$base-padding values.$base-padding * 2;
+  background-color: values.$color-dark-alt;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.watchBtn {
+  padding: values.$base-padding values.$base-padding * 2;
+  font-size: 20px;
+  color: values.$color-light;
+  background-color: values.$color-primary;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+}

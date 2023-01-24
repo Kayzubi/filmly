@@ -6,7 +6,7 @@ interface Props {
 }
 
 const Helmet = ({ title, children }: Props) => {
-  document.title = 'Filmly || ' + { title }
+  document.title = `Filmly ||  ${title}`
   return <div>{children}</div>
 }
 
