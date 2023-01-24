@@ -154,3 +154,21 @@ img {
   font-weight: 600;
   margin-bottom: 20px;
 }
+
+.moreBtn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+
+  button {
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    color: values.$color-light;
+    border-bottom: 1px solid values.$color-light;
+    padding-bottom: 5px;
+    font-size: 14px;
+    outline: none;
+  }
+}

@@ -32,6 +32,55 @@ const data = [
     year: '2022',
     rating: '7.9',
   },
+  {
+    id: 1,
+    title: 'Thor: love and thunder',
+    image: thor,
+    year: '2022',
+    rating: '7.9',
+  },
+  {
+    id: 4,
+    title: 'Thor: love and thunder',
+    image: thor,
+    year: '2022',
+    rating: '7.9',
+  },
+  {
+    id: 8,
+    title: 'Thor: love and thunder',
+    image: thor,
+    year: '2022',
+    rating: '7.9',
+  },
+  {
+    id: 9,
+    title: 'Thor: love and thunder',
+    image: thor,
+    year: '2022',
+    rating: '7.9',
+  },
+  {
+    id: 10,
+    title: 'Thor: love and thunder',
+    image: thor,
+    year: '2022',
+    rating: '7.9',
+  },
+  {
+    id: 11,
+    title: 'Thor: love and thunder',
+    image: thor,
+    year: '2022',
+    rating: '7.9',
+  },
+  {
+    id: 12,
+    title: 'Thor: love and thunder',
+    image: thor,
+    year: '2022',
+    rating: '7.9',
+  },
 ]
 
 const MovieList = () => {

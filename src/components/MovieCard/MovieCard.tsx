@@ -2,6 +2,8 @@ import { FC } from 'react'
 import { Col } from 'reactstrap'
 import styles from './movieCard.module.scss'
 
+import { motion } from 'framer-motion'
+
 interface Props {
   title: string
   year: string
@@ -12,7 +14,11 @@ interface Props {
 const MovieCard: FC<Props> = ({ title, year, rating, image }) => {
   return (
     <Col lg='3'>
-      <div className={styles.card}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false }}
+        className={styles.card}>
         <div className={styles.cardImage}>
           <img src={image} alt='' />
         </div>
@@ -26,7 +32,7 @@ const MovieCard: FC<Props> = ({ title, year, rating, image }) => {
             </span>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Col>
   )
 }
