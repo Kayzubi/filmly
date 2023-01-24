@@ -2,13 +2,15 @@ import React from 'react'
 import { MdPlayCircle } from 'react-icons/md'
 import styles from './hero.module.scss'
 
+import hero from '../../assets/NJXQ8h3mUd9mhsh2m8xpba.jpg'
+
 import { motion } from 'framer-motion'
 
 const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.coverImage}>
-        <img src='' alt='' />
+        <img src={hero} alt='' />
         <div></div>
       </div>
       <div className={styles.heroDetails}>

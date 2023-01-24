@@ -106,6 +106,12 @@ main {
   color: values.$color-light;
   overflow-x: hidden;
   padding-left: 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 ol,
 ul {
@@ -141,4 +147,10 @@ img {
 
 .dashboard {
   height: 100%;
+}
+
+.heading__section {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
