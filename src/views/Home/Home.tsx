@@ -3,6 +3,7 @@ import Aside from '../../components/Aside/Aside'
 import Sidebar from '../../components/SIdebar/Sidebar'
 
 import styles from './home.module.scss'
+import Footer from '../../components/Footer/Footer'
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
       <Sidebar />
       <main>
         <AnimatedRoutes />
-        <div>created by Azubuike Kizito</div>
+        <Footer />
       </main>
       <Aside />
     </div>
