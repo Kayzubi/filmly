@@ -1,25 +1,32 @@
-import React from 'react'
+import { FC } from 'react'
 import { MdPlayCircle } from 'react-icons/md'
 import styles from './hero.module.scss'
 
-import hero from '../../assets/NJXQ8h3mUd9mhsh2m8xpba.jpg'
-
 import { motion } from 'framer-motion'
+import { TrendingTypes } from '../../@types/movies'
 
-const Hero = () => {
+interface Props {
+  data: TrendingTypes
+}
+
+const Hero: FC<Props> = ({ data }) => {
   return (
     <section className={styles.hero}>
       <div className={styles.coverImage}>
-        <img src={hero} alt='' />
+        <img
+          src={`https://image.tmdb.org/t/p/original${data.backdrop_path}`}
+          alt=''
+        />
         <div></div>
       </div>
       <div className={styles.heroDetails}>
         <div>
-          <h1>Doctor Strange in the multiverse of madness</h1>
-          <div className={styles.genres}>
-            <span className={styles.genre}>Adventure</span>
-            <span className={styles.genre}>Action</span>
-            <span className={styles.genre}>Fantasy</span>
+          {data.media_type && (
+            <h4 className={styles.type}>{data.media_type}</h4>
+          )}
+          <h1>{data.title}</h1>
+          <div className={styles.desc}>
+            <p>{data.overview}</p>
           </div>
         </div>
         <span>

@@ -1,6 +1,6 @@
 import { ReducerTypes, MoviesContextTypes } from '../@types/movies'
 
-const MoviesReducer = (state: MoviesContextTypes, action: ReducerTypes) => {
+const moviesReducer = (state: MoviesContextTypes, action: ReducerTypes) => {
   switch (action.type) {
     case 'GET_DATA':
       return {
@@ -14,4 +14,4 @@ const MoviesReducer = (state: MoviesContextTypes, action: ReducerTypes) => {
   }
 }
 
-export default MoviesReducer
+export default moviesReducer

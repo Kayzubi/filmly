@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './aside.module.scss'
 import strange from '../../assets/p_drstrangeinthemultiverseofmadness_245_476cabb1.jpeg'
 import AsideSection from './AsideSection'
 import { useNavigate } from 'react-router-dom'
 import { SIGNIN, SIGNUP } from '../../routes/RouteConstants'
+import MoviesContext from '../../context/MoviesContext'
 
-const upcoming = [
+const newList = [
   {
     id: 1,
     title: 'Dr Strange in the multiverse of madness',
@@ -27,6 +28,7 @@ const upcoming = [
 ]
 
 const Aside = () => {
+  const { upcoming } = useContext(MoviesContext)
   const navigate = useNavigate()
   return (
     <div className={styles.aside}>
@@ -39,8 +41,8 @@ const Aside = () => {
         </button>
       </div>
       <div className={styles.info}>
-        <AsideSection title='Upcoming Movies' data={upcoming} />
-        <AsideSection title='Watchlist' data={upcoming} />
+        <AsideSection title='Upcoming Movies' data={upcoming.slice(1, 4)} />
+        <AsideSection title='Watchlist' data={newList} />
       </div>
     </div>
   )

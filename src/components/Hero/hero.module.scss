@@ -69,6 +69,14 @@
   margin-top: 10px;
 }
 
+.desc {
+  width: 60%;
+}
+
+.type {
+  text-transform: uppercase;
+}
+
 .watchBtn {
   padding: values.$base-padding values.$base-padding * 2;
   font-size: 20px;

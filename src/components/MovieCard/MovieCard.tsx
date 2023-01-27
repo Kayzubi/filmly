@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 interface Props {
   title: string
   year: string
-  rating: string
+  rating: number
   image: any
 }
 
@@ -20,14 +20,14 @@ const MovieCard: FC<Props> = ({ title, year, rating, image }) => {
         viewport={{ once: false }}
         className={styles.card}>
         <div className={styles.cardImage}>
-          <img src={image} alt='' />
+          <img src={`https://image.tmdb.org/t/p/original${image}`} alt='' />
         </div>
         <div className={styles.cardDetails}>
           <h3 className={styles.title}>{title}</h3>
           <div>
             <span className={styles.year}>{year}</span>
             <span className={styles.rating}>
-              {rating}
+              {rating.toFixed(1)}
               <span>/10</span>
             </span>
           </div>

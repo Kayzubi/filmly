@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Container, Row, Col } from 'reactstrap'
+import MoviesContext from '../../context/MoviesContext'
 
 import { motion } from 'framer-motion'
 
@@ -9,11 +10,16 @@ import MovieList from '../../components/MovieList/MovieList'
 import AnimatedDiv from '../../components/Shared/AnimatedDiv'
 
 const Dashboard = () => {
+  const { trending, loading } = useContext(MoviesContext)
+
+  console.log(trending)
+
   return (
     <Helmet title='Home'>
       <AnimatedDiv>
         <div className='dashboard'>
-          <Hero />
+          {!loading && <Hero data={trending[0]} />}
+
           <motion.section
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -23,7 +29,9 @@ const Dashboard = () => {
                 <Col lg='12'>
                   <h3 className='heading__section'>Trending Movies</h3>
                 </Col>
-                <MovieList />
+                <MovieList
+                  data={trending.filter((item) => item.media_type === 'movie')}
+                />
                 <Col lg='3'>
                   <div className='moreBtn'>
                     <button>See more</button>
@@ -41,7 +49,9 @@ const Dashboard = () => {
                 <Col lg='12'>
                   <h3 className='heading__section'>Trending TV Shows</h3>
                 </Col>
-                <MovieList />
+                <MovieList
+                  data={trending.filter((item) => item.media_type === 'tv')}
+                />
                 <Col lg='3'>
                   <div className='moreBtn'>
                     <button>See more</button>

@@ -12,9 +12,12 @@ const AsideSection: FC<Props> = ({ title, data }) => {
       <h3>{title}</h3>
 
       {data?.map((item: any) => (
-        <div className={styles.listItem}>
+        <div key={item.id} className={styles.listItem}>
           <div className={styles.image}>
-            <img src={item.image} alt='' />
+            <img
+              src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
+              alt=''
+            />
           </div>
           <div>
             <h5>{item.title}</h5>
