@@ -1,6 +1,6 @@
 import axios from 'axios'
-const tmbd_url: string = 'https://api.themoviedb.org/3'
-const API_KEY: string = '844900ecbd272e079b15281ae1093b76'
+const tmbd_url: string = process.env.REACT_APP_TMBD_URL as string
+const API_KEY: string = process.env.REACT_APP_TMBD_API_KEY as string
 
 const movies = axios.create({
   baseURL: tmbd_url,
@@ -47,7 +47,11 @@ export const getHomeData = async () => {
     }
   })
 
-  //   return { trending: trending, upcoming: upcoming }
-
   return { trending: trendingResult, upcoming: upcomingResult }
+}
+
+export const getData = async (url: string) => {
+  const result = await movies.get(url)
+
+  return result
 }
