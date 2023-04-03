@@ -1,4 +1,5 @@
 @use '../../variables.scss' as values;
+@use '../../breakpoints.scss' as breakpoints;
 
 .sidebar {
   background-color: values.$color-dark;
@@ -6,6 +7,9 @@
   padding: values.$base-padding * 2;
   height: 100%;
   position: relative;
+  @include breakpoints.mobile {
+    display: none;
+  }
 }
 
 .content {

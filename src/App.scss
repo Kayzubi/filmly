@@ -117,6 +117,10 @@ body {
 section {
   margin-bottom: 50px;
   padding: 0 30px;
+
+  @include breakpoints.mobile {
+    padding: 0 10px;
+  }
 }
 
 button {
@@ -235,4 +239,17 @@ img {
 
 .page-center {
   @include values.absCenter;
+}
+
+.mobile-scroll {
+  @include breakpoints.mobile {
+    flex-wrap: nowrap !important;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }

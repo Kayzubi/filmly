@@ -30,10 +30,8 @@ const Dashboard = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}>
               <Container>
-                <Row>
-                  <Col lg='12'>
-                    <h3 className='heading__section'>Trending Movies</h3>
-                  </Col>
+                <h3 className='heading__section'>Trending Movies</h3>
+                <Row className='mobile-scroll'>
                   <MovieList data={movies.slice(0, 14)} />
                   <Col lg='3'>
                     <div className='moreBtn'>
@@ -48,10 +46,8 @@ const Dashboard = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: false }}>
               <Container>
-                <Row>
-                  <Col lg='12'>
-                    <h3 className='heading__section'>Trending TV Shows</h3>
-                  </Col>
+                <h3 className='heading__section'>Trending TV Shows</h3>
+                <Row className='mobile-scroll'>
                   <MovieList data={tvshows.slice(0, 14)} />
                   <Col lg='3'>
                     <div className='moreBtn'>
