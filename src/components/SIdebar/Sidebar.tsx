@@ -13,6 +13,29 @@ import {
 } from 'react-icons/md'
 
 const Sidebar = () => {
+  const mainLinks = [
+    {
+      to: 'home',
+      icon: <MdSlowMotionVideo />,
+      text: 'Browse',
+    },
+    {
+      to: 'movies',
+      icon: <MdMovie />,
+      text: 'Movies',
+    },
+    {
+      to: 'tv',
+      icon: <MdOndemandVideo />,
+      text: 'TV Shows',
+    },
+    {
+      to: 'watchlist',
+      icon: <MdVideoLibrary />,
+      text: 'Watchlist',
+    },
+  ]
+
   return (
     <div className={styles.sidebar}>
       <div className={styles.content}>
@@ -20,28 +43,17 @@ const Sidebar = () => {
         <div className={styles.sidebarSection}>
           <h5>Menu</h5>
           <ul>
-            <li>
-              <NavLink to={'home'}>
-                <MdSlowMotionVideo size={30} /> Browse
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to={'movies'}>
-                <MdMovie size={30} /> Movies
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to={'shows'}>
-                <MdOndemandVideo size={30} /> TV Shows
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to={'watchlist'}>
-                {' '}
-                <MdVideoLibrary size={30} />
-                Watchlist
-              </NavLink>
-            </li>
+            {mainLinks.map((item) => (
+              <li key={item.to}>
+                <NavLink
+                  to={item.to}
+                  className={({ isActive }) =>
+                    isActive ? `${styles.active}` : ''
+                  }>
+                  {item.icon} {item.text}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
         <div className={styles.sidebarSection}>
@@ -49,13 +61,12 @@ const Sidebar = () => {
           <ul>
             <li>
               <NavLink to={'profile'}>
-                {' '}
-                <MdPerson size={30} /> Profile
+                <MdPerson /> Profile
               </NavLink>
             </li>
             <li>
               <NavLink to={'friends'}>
-                <MdPeople size={30} /> People
+                <MdPeople /> People
               </NavLink>
             </li>
           </ul>

@@ -41,7 +41,7 @@ const Aside = () => {
         </button>
       </div>
       <div className={styles.info}>
-        <AsideSection title='Upcoming Movies' data={upcoming.slice(1, 4)} />
+        <AsideSection title='Upcoming Movies' data={upcoming.slice(0, 3)} />
         <AsideSection title='Watchlist' data={newList} />
       </div>
     </div>

@@ -1,37 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import Loader from '../../components/Loader/Loader'
 import TitleSection from '../../components/Shared/TitleSection/TitleSection'
-import { getData } from '../../context/RequestActions'
-const API_KEY: string = process.env.REACT_APP_TMBD_API_KEY as string
+import useGetMovie from '../../hooks/useGetMovie'
 
 const MovieDetails = () => {
-  const [info, setInfo] = useState<any>()
-  const [cast, setCast] = useState<any>()
-  const [recomended, setRecomended] = useState<any>()
-
   const { id } = useParams()
 
+  const { loading, fetchData, data } = useGetMovie('movie', id)
+
   useEffect(() => {
-    async function getMovieInfo() {
-      const [movie, credit, related] = await Promise.all([
-        getData(`/movie/${id}?api_key=${API_KEY}&language=en-US`),
-        getData(`/movie/${id}/credits?api_key=${API_KEY}&language=en-US`),
-        getData(
-          `/movie/${id}/recommendations?api_key=${API_KEY}&language=en-US&page=1`
-        ),
-      ])
-
-      setInfo(movie)
-      setCast(credit)
-      setRecomended(related)
-      console.log(info)
-      console.log(cast)
-      console.log(recomended)
-    }
-
-    getMovieInfo()
+    fetchData()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id])
+  }, [])
+
+  console.log(data)
+
+  if (loading) return <Loader />
+
   return (
     <div>
       <TitleSection />

@@ -11,14 +11,15 @@ interface Props {
   rating: number
   image: any
   id: number
+  type: string
 }
 
-const MovieCard: FC<Props> = ({ title, year, rating, image, id }) => {
+const MovieCard: FC<Props> = ({ title, year, rating, image, id, type }) => {
   const navigate = useNavigate()
   return (
-    <Col lg='3'>
+    <Col lg='2' md='6'>
       <motion.div
-        onClick={() => navigate(`/movie/${id}`)}
+        onClick={() => navigate(`/${type}/${id}`)}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: false }}

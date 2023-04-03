@@ -4,7 +4,7 @@
   font-family: 'Source Sans Pro', sans-serif;
 
   h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -16,8 +16,9 @@
   .icons {
     position: relative;
     margin: 15px;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
   }
 
   .above {

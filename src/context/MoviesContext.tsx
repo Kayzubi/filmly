@@ -8,7 +8,8 @@ interface Props {
 }
 
 const initialState = {
-  trending: [],
+  movies: [],
+  tvshows: [],
   upcoming: [],
   loading: true,
 }

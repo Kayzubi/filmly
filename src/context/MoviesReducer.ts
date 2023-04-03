@@ -5,7 +5,8 @@ const moviesReducer = (state: MoviesContextTypes, action: ReducerTypes) => {
     case 'GET_DATA':
       return {
         ...state,
-        trending: action.payload.trending,
+        movies: action.payload.movies,
+        tvshows: action.payload.tvshows,
         upcoming: action.payload.upcoming,
         loading: false,
       }

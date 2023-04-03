@@ -17,6 +17,7 @@ const MovieList: FC<Props> = ({ data }) => {
           year={item.release_date}
           rating={item.vote_average}
           id={item.id}
+          type={item.media_type}
         />
       ))}
     </>

@@ -1,4 +1,5 @@
 @use './variables.scss' as values;
+@use './breakpoints.scss' as breakpoints;
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,900&display=swap');
 
@@ -78,6 +79,25 @@ legend {
   outline: 0;
 }
 
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include breakpoints.tablet {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include breakpoints.mobile {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include breakpoints.large {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+
 a {
   &,
   &:link,
@@ -96,6 +116,7 @@ body {
 
 section {
   margin-bottom: 50px;
+  padding: 0 30px;
 }
 
 button {
@@ -154,9 +175,9 @@ img {
 }
 
 .heading__section {
-  font-size: 25px;
+  font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .moreBtn {
@@ -172,9 +193,14 @@ img {
     color: values.$color-light;
     border-bottom: 1px solid values.$color-light;
     padding-bottom: 5px;
-    font-size: 14px;
+    font-size: 1.2rem;
     outline: none;
   }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer {
@@ -182,9 +208,10 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: values.$base-padding;
-  font-size: 12px;
+  font-size: 0.8rem;
   background-color: #000;
   margin-left: -20px;
+  margin-top: auto;
 
   p {
     margin-bottom: 0;
@@ -204,4 +231,8 @@ img {
       margin-right: 10px;
     }
   }
+}
+
+.page-center {
+  @include values.absCenter;
 }
