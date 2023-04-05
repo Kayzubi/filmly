@@ -134,7 +134,6 @@ main {
   background-color: values.$color-dark-alt;
   color: values.$color-light;
   overflow-x: hidden;
-  padding-left: 20px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -185,25 +184,22 @@ img {
 }
 
 .moreBtn {
-  height: 100%;
-  display: flex;
+  background: transparent;
+  border: none;
+  padding: 10px;
+  color: values.$color-light;
+  border-bottom: 1px solid values.$color-light;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+  outline: none;
+  display: inline-flex;
   align-items: center;
-  padding-left: 20px;
-
-  button {
-    text-transform: uppercase;
-    background: transparent;
-    border: none;
-    color: values.$color-light;
-    border-bottom: 1px solid values.$color-light;
-    padding-bottom: 5px;
-    font-size: 1.2rem;
-    outline: none;
-  }
+  gap: 10px;
 }
 
 .main {
   display: flex;
+  width: 100%;
   flex-direction: column;
 }
 
@@ -214,7 +210,6 @@ img {
   padding: values.$base-padding;
   font-size: 0.8rem;
   background-color: #000;
-  margin-left: -20px;
   margin-top: auto;
 
   p {
@@ -237,19 +232,19 @@ img {
   }
 }
 
-.page-center {
-  @include values.absCenter;
+.watchBtn {
+  padding: values.$base-padding values.$base-padding * 2;
+  font-size: 1.2rem;
+  color: values.$color-light;
+  background-color: values.$color-primary;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.mobile-scroll {
-  @include breakpoints.mobile {
-    flex-wrap: nowrap !important;
-    overflow: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
+.page-center {
+  @include values.absCenter;
 }

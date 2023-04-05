@@ -1,10 +1,16 @@
 @use '../../variables.scss' as values;
+@use '../../breakpoints.scss' as breakpoints;
 
 .card {
   position: relative;
   overflow: hidden;
   cursor: pointer;
   margin-bottom: 20px;
+  // height: 250px;
+
+  // @include breakpoints.mobile {
+  //   width: 150px;
+  // }
 
   &:hover {
     .cardImage {
@@ -13,19 +19,6 @@
     .cardDetails {
       bottom: 0;
       opacity: 1;
-    }
-  }
-}
-
-.cardImage {
-  img {
-    transform: scale(1.2);
-    transition: all 0.2s;
-  }
-
-  &:hover {
-    img {
-      transform: scale(1);
     }
   }
 }
@@ -52,22 +45,22 @@
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 .year {
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .rating {
   font-weight: 900;
-  font-size: 20px;
+  font-size: 1.2rem;
   color: values.$color-primary;
 
   span {
-    font-size: 15px;
+    font-size: 1.1rem;
     margin-left: 2px;
     color: values.$color-light;
   }

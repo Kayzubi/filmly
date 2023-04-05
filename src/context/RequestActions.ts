@@ -66,10 +66,10 @@ export const getData = async (
     }
   } catch (error: any) {
     if (errorFunc) {
-      errorFunc(error)
+      errorFunc(error.response)
     }
     if (loadingFunc) {
-      loadingFunc(true)
+      loadingFunc(false)
     }
   }
 }

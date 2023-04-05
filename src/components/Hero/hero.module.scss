@@ -2,7 +2,7 @@
 
 .hero {
   height: 60vh;
-  padding: 2rem;
+  padding: 2rem 3rem;
   position: relative;
   display: flex;
   justify-content: start;
@@ -79,21 +79,11 @@
 
 .desc {
   width: 60%;
-  max-width: 400px;
+  max-width: 600px;
   margin-top: 20px;
 }
 
 .type {
   text-transform: uppercase;
   font-size: 1rem;
-}
-
-.watchBtn {
-  padding: values.$base-padding values.$base-padding * 2;
-  font-size: 1.5rem;
-  color: values.$color-light;
-  background-color: values.$color-primary;
-  border: none;
-  outline: none;
-  border-radius: 50px;
 }

@@ -34,7 +34,7 @@ const Hero: FC<Props> = ({ data }) => {
           <Ratings rating={data.vote_average} />
         </div>
         <span>
-          <motion.button whileTap={{ scale: 1.2 }} className={styles.watchBtn}>
+          <motion.button whileTap={{ scale: 1.2 }} className='watchBtn'>
             Watch <MdPlayCircle />
           </motion.button>
         </span>

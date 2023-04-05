@@ -6,6 +6,7 @@
   color: values.$grey-dark;
   padding: values.$base-padding * 2;
   height: 100%;
+  width: 200px;
   position: relative;
   @include breakpoints.mobile {
     display: none;

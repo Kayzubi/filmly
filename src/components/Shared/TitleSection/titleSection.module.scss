@@ -1,0 +1,29 @@
+@use '../../../variables.scss' as values;
+
+.titleSection {
+  position: relative;
+
+  h1 {
+    font-weight: 900;
+  }
+}
+
+.genres {
+  margin-bottom: 20px;
+  span {
+    padding-right: 20px;
+    &:not(:first-child) {
+      padding-left: 20px;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid values.$color-light;
+    }
+  }
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

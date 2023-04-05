@@ -1,0 +1,27 @@
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .shade {
+    @extend .background;
+    top: 0;
+    left: 0;
+    background: rgb(25, 24, 23);
+    background: linear-gradient(
+      0deg,
+      rgba(25, 24, 23, 1) 1%,
+      rgba(25, 24, 23, 1) 42%,
+      rgba(25, 24, 23, 0.6839985994397759) 68%,
+      rgba(255, 255, 255, 0) 93%,
+      rgba(25, 24, 23, 1) 100%
+    );
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { AnimatePresence } from 'framer-motion'
 import { Route, Routes, Navigate, useLocation } from 'react-router-dom'
-import Dashboard from '../../views/Dashboard/Dashboard'
+import Home from '../../views/Home/Home'
 import {
   HOME,
   MOVIES,
@@ -17,7 +17,7 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence mode='wait'>
       <Routes location={location} key={location.pathname}>
-        <Route path={HOME} element={<Dashboard />} />
+        <Route path={HOME} element={<Home />} />
         <Route path={MOVIES} element={<h1>Movies</h1>} />
         <Route path='movie/:id' element={<MovieDetails />} />
         <Route path={SHOWS} element={<h1>Shows</h1>} />
